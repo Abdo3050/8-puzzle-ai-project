@@ -201,18 +201,22 @@ git clone https://github.com/username/8-puzzle-ai-project.git && cd 8-puzzle-ai-
 python -c "from utils.state import PuzzleState; print('✓ System ready')"
 ```
 
-### **Quick Start Examples**
+### **Quick Start**
 ```python
-# Example 1: Run single algorithm
+# 1: Run all algorithms
+python main.py
+
+# 2: Comparative analysis
+python run_analysis.py --test all --output detailed
+
+# 3: Custom puzzle
+python main.py --start "1 2 3 4 0 5 7 8 6" --goal "1 2 3 4 5 6 7 8 0"
+
+# 4: Run single algorithm
 from bfs.bfs import bfs
 result = bfs(start_board, goal_board)
 print(f"Solution in {result['path_length']} moves")
 
-# Example 2: Comparative analysis
-python run_analysis.py --test all --output detailed
-
-# Example 3: Custom puzzle
-python main.py --start "1 2 3 4 0 5 7 8 6" --goal "1 2 3 4 5 6 7 8 0"
 ```
 
 ### **Project Navigation Guide**
