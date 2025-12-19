@@ -209,14 +209,6 @@ python main.py
 # 2: Comparative analysis
 python run_analysis.py
 
-# 3: Custom puzzle
-python main.py --start "1 2 3 4 0 5 7 8 6" --goal "1 2 3 4 5 6 7 8 0"
-
-# 4: Run single algorithm
-from bfs.bfs import bfs
-result = bfs(start_board, goal_board)
-print(f"Solution in {result['path_length']} moves")
-
 ```
 
 ### **Project Navigation Guide**
