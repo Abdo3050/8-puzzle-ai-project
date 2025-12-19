@@ -1,10 +1,10 @@
 Algorithm,Solution Found,Time (s),Nodes Expanded,Path Length,Optimal,Iterations,Generations
 BFS,True,0.0,12,2,True,,
 DFS,True,0.0,2,2,False,,
-UCS,True,0.0009953975677490234,9,2,True,,
+UCS,True,0.0009975433349609375,9,2,True,,
 IDS,True,0.0,6,2,False,,
 A* (Manhattan),True,0.0,2,2,False,,
-A* (Misplaced),True,0.0,2,2,False,,
+A* (Misplaced),True,0.0009982585906982422,2,2,False,,
 Hill Climbing,True,0.0,7,2,False,3.0,
 Hill Climbing (Restart),True,0.0,7,2,False,3.0,
-Genetic Algorithm,True,0.0050199031829833984,0,12,False,,1.0
+Genetic Algorithm,True,0.01894688606262207,0,8,False,,6.0
