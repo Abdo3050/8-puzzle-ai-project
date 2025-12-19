@@ -104,7 +104,7 @@ def main():
     results['Hill Climbing (Restart)'] = run_algorithm("Hill Climbing (Restart)", 
                                                       hill_climbing_with_restart,
                                                       test_case["start"], test_case["goal"])
-    
+    #Abdelrhman Reda Abdelrhman Torad
     # 9. Genetic Algorithm
     results['Genetic Algorithm'] = run_algorithm("Genetic Algorithm", genetic_algorithm_search,
                                                test_case["start"], test_case["goal"])
