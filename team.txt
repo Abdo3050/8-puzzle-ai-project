@@ -1,0 +1,57 @@
+Team Members for 8-Puzzle AI Project
+=====================================
+
+1. [عبدالرحمن رضا عبدالرحمن عبدالمقصود طراد] - Team Leader
+   Student ID: [2023313]
+   Contributions:
+   - Project coordination and management
+   - Repository setup and structure
+   - Main script implementation
+   - Utility functions (state, moves, heuristics)
+   - Final analysis and comparison
+
+2. [ابراهيم محمد ابراهيم محمد البيومى الغزالى] - BFS & DFS
+   Student ID: [2023268]
+   Contributions:
+   - Breadth-First Search implementation
+   - Depth-First Search implementation
+   - Testing and debugging
+
+3. [Member 3 Name] - UCS & IDS
+   Student ID: [ID]
+   Contributions:
+   - Uniform Cost Search implementation
+   - Iterative Deepening Search implementation
+   - Performance analysis
+
+4. [Member 4 Name] - A* Search
+   Student ID: [ID]
+   Contributions:
+   - A* Search with Manhattan Distance
+   - A* Search with Misplaced Tiles
+   - Heuristic function comparison
+
+5. [Member 5 Name] - Hill Climbing
+   Student ID: [ID]
+   Contributions:
+   - Hill Climbing algorithm
+   - Hill Climbing with Random Restart
+   - Local search optimization
+
+6. [Member 6 Name] - Report & Visualization
+   Student ID: [ID]
+   Contributions:
+   - Project report writing
+   - Performance comparison tables
+   - Data visualization (charts and graphs)
+
+7. [Member 7 Name] - Genetic Algorithm
+   Student ID: [ID]
+   Contributions:
+   - Genetic Algorithm implementation
+   - Optimization techniques
+   - Comparative analysis
+
+Project completed on: December 18, 2025
+Course: Artificial Intelligence
+University: [Tanta University]
