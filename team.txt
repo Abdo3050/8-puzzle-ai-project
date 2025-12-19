@@ -17,36 +17,36 @@ Team Members for 8-Puzzle AI Project
    - Depth-First Search implementation
    - Testing and debugging
 
-3. [Member 3 Name] - UCS & IDS
-   Student ID: [ID]
+3. [احمد رمزى محمد عطيه موسى] - UCS & IDS
+   Student ID: [2023271]
    Contributions:
    - Uniform Cost Search implementation
    - Iterative Deepening Search implementation
    - Performance analysis
 
-4. [Member 4 Name] - A* Search
-   Student ID: [ID]
+4. [عبدالخالق ابراهيم احمد شاكر فايد] - A* Search
+   Student ID: [2023312]
    Contributions:
    - A* Search with Manhattan Distance
    - A* Search with Misplaced Tiles
    - Heuristic function comparison
 
-5. [Member 5 Name] - Hill Climbing
-   Student ID: [ID]
+5. [عبدالعزيز محمد عبدالرحيم عسكر عسكر] - Hill Climbing
+   Student ID: [2023323]
    Contributions:
    - Hill Climbing algorithm
    - Hill Climbing with Random Restart
    - Local search optimization
 
-6. [Member 6 Name] - Report & Visualization
-   Student ID: [ID]
+6. [عبدالله محمد عبدالرحيم عسكر عسكر] - Report & Visualization
+   Student ID: [2023325]
    Contributions:
    - Project report writing
    - Performance comparison tables
    - Data visualization (charts and graphs)
 
-7. [Member 7 Name] - Genetic Algorithm
-   Student ID: [ID]
+7. [محمد عبدالغنى شاكر عبدالغنى فرج] - Genetic Algorithm
+   Student ID: [2023373]
    Contributions:
    - Genetic Algorithm implementation
    - Optimization techniques
