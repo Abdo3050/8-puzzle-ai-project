@@ -1,7 +1,7 @@
 ======================================================================
 8-PUZZLE AI ALGORITHMS PERFORMANCE REPORT
 ======================================================================
-Generated on: 2025-12-19 02:23:58
+Generated on: 2025-12-19 03:14:10
 
 
 SUMMARY
@@ -18,7 +18,7 @@ BFS:
   Solution Found: ✓
   Path Length: 2
   Nodes Expanded: 12
-  Time Taken: 0.0010 seconds
+  Time Taken: 0.0000 seconds
 
 DFS:
   Solution Found: ✓
@@ -30,7 +30,7 @@ UCS:
   Solution Found: ✓
   Path Length: 2
   Nodes Expanded: 9
-  Time Taken: 0.0000 seconds
+  Time Taken: 0.0010 seconds
 
 IDS:
   Solution Found: ✓
@@ -66,14 +66,14 @@ Hill Climbing (Restart):
 
 Genetic Algorithm:
   Solution Found: ✓
-  Path Length: 8
+  Path Length: 11
   Nodes Expanded: N/A
-  Time Taken: 0.0110 seconds
+  Time Taken: 0.0170 seconds
   Generations: 5
 
 RECOMMENDATIONS
 ----------------------------------------
-Fastest Algorithm: DFS (0.0000s)
+Fastest Algorithm: BFS (0.0000s)
 Most Efficient (Nodes): Genetic Algorithm (0 nodes)
 Shortest Path: BFS (2 moves)
 

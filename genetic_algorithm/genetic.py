@@ -138,6 +138,7 @@ class GeneticAlgorithm:
     def run(self, start_board):
         """Main GA execution"""
         population = self.create_initial_population(start_board)
+        nodes_expanded = len(population)  # Initial population count
         
         for generation in range(self.max_generations):
             population.sort(key=lambda x: x[1], reverse=True)
@@ -190,6 +191,7 @@ class GeneticAlgorithm:
             "best_fitness": population[0][1],
             "final_state": best_state.board,
             "distance_to_goal": manhattan_distance(best_state, self.goal_board),
+            "nodes_expanded": nodes_expanded,
             "fitness_history": self.best_fitness_history
         }
 

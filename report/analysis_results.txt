@@ -1,0 +1,109 @@
+8-Puzzle Algorithm Analysis Results
+============================================================
+Generated: 2025-12-19 04:50:56
+
+Algorithm: BFS
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 28
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: DFS
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 50 moves
+    Nodes Expanded: 7,480
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: UCS
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 20
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: IDS
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 24
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: A* (Manhattan)
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 4
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: A* (Misplaced)
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 4
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: Hill Climbing
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 12
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: Hill Climbing (Restart)
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 4 moves
+    Nodes Expanded: 12
+    Time Taken: 0.0000 seconds
+
+
+Algorithm: Genetic Algorithm
+----------------------------------------
+  Test Case: hard
+    Description: Hard case - requires 4 moves
+    Optimal Length: 4 moves
+    Solution Found: Yes
+    Path Length: 10 moves
+    Nodes Expanded: N/A
+    Time Taken: 0.0000 seconds
+
+
+
+RECOMMENDATIONS
+----------------------------------------
+Fastest Algorithm: BFS (infs)
+Most Efficient (Nodes): A* (Manhattan) (4 nodes)
+Shortest Path: BFS (4 moves)

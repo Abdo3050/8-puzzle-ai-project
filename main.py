@@ -1,43 +1,20 @@
 #!/usr/bin/env python3
 """
-Main script to run 8-Puzzle algorithms
+Main script to run 8-Puzzle algorithms with test cases
 """
 
 import time
+from test_cases import TEST_CASES, print_board, get_test_case
 from bfs.bfs import bfs
 from dfs.dfs import dfs
 from ucs.ucs import ucs
 from ids.ids import ids
 from astar.astar import astar_search
 from hill_climbing.hill_climbing import hill_climbing, hill_climbing_with_restart
-
-# Test puzzle configurations
-START_BOARD = [
-    [1, 2, 3],
-    [4, 0, 5],
-    [7, 8, 6]
-]
-
-GOAL_BOARD = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 0]
-]
-
-def print_board(board):
-    """Print puzzle board nicely"""
-    print("+---+---+---+")
-    for row in board:
-        print("|", end="")
-        for cell in row:
-            if cell == 0:
-                print("   |", end="")
-            else:
-                print(f" {cell} |", end="")
-        print("\n+---+---+---+")
+from genetic_algorithm.genetic import genetic_algorithm_search
 
 def run_algorithm(algorithm_name, algorithm_func, *args):
-    """Run algorithm and measure time"""
+    """Run single algorithm and measure performance"""
     print(f"\n{'='*50}")
     print(f"Running {algorithm_name}")
     print(f"{'='*50}")
@@ -51,11 +28,11 @@ def run_algorithm(algorithm_name, algorithm_func, *args):
     if result.get("solution_found", False):
         print(f"✓ Solution found!")
         print(f"Path length: {result['path_length']}")
-        print(f"Nodes expanded: {result['nodes_expanded']}")
+        print(f"Nodes expanded: {result.get('nodes_expanded', 'N/A')}")
         print(f"Time taken: {result['time_taken']:.4f} seconds")
-        
+
         # Show first and last few moves
-        path = result['path']
+        path = result.get('path')
         if path:
             print(f"First 5 moves: {[p[0] for p in path[:5]]}")
             if len(path) > 10:
@@ -69,38 +46,68 @@ def run_algorithm(algorithm_name, algorithm_func, *args):
 
 def main():
     """Main function"""
-    print("8-Puzzle Solver")
+    print("8-Puzzle Solver - Test Suite")
     print("=" * 50)
-    print("Start board:")
-    print_board(START_BOARD)
-    print("\nGoal board:")
-    print_board(GOAL_BOARD)
     
+    # Select test case
+    print("\n📋 Available Test Cases:")
+    for i, (name, case) in enumerate(TEST_CASES.items(), 1):
+        print(f"{i}. {name:12} - {case['description']}")
+    
+    try:
+        choice = int(input("\nEnter test case number (1-4): ").strip())
+        case_names = list(TEST_CASES.keys())
+        selected_case = case_names[choice-1] if 1 <= choice <= 4 else "easy"
+    except (ValueError, IndexError):
+        selected_case = "easy"
+    
+    test_case = TEST_CASES[selected_case]
+    
+    print(f"\nSelected Case: {selected_case}")
+    print(f"Description: {test_case['description']}")
+    print(f"Optimal length: {test_case['optimal_length']} moves")
+    
+    print("\nStart Board:")
+    print_board(test_case["start"])
+    
+    print("\nGoal Board:")
+    print_board(test_case["goal"])
+    
+    # Run all algorithms
     results = {}
     
-    # Run BFS
-    results['BFS'] = run_algorithm("BFS", bfs, START_BOARD, GOAL_BOARD)
+    # 1. BFS
+    results['BFS'] = run_algorithm("BFS", bfs, test_case["start"], test_case["goal"])
     
-    # Run DFS
-    results['DFS'] = run_algorithm("DFS", dfs, START_BOARD, GOAL_BOARD)
+    # 2. DFS
+    results['DFS'] = run_algorithm("DFS", dfs, test_case["start"], test_case["goal"])
     
-    # Run UCS
-    results['UCS'] = run_algorithm("UCS", ucs, START_BOARD, GOAL_BOARD)
+    # 3. UCS
+    results['UCS'] = run_algorithm("UCS", ucs, test_case["start"], test_case["goal"])
     
-    # Run IDS
-    results['IDS'] = run_algorithm("IDS", ids, START_BOARD, GOAL_BOARD)
+    # 4. IDS
+    results['IDS'] = run_algorithm("IDS", ids, test_case["start"], test_case["goal"])
     
-    # Run A* with Manhattan
-    results['A* Manhattan'] = run_algorithm("A* (Manhattan)", astar_search, START_BOARD, GOAL_BOARD, 'manhattan')
+    # 5. A* Manhattan
+    results['A* Manhattan'] = run_algorithm("A* (Manhattan)", astar_search, 
+                                          test_case["start"], test_case["goal"], 'manhattan')
     
-    # Run A* with Misplaced
-    results['A* Misplaced'] = run_algorithm("A* (Misplaced)", astar_search, START_BOARD, GOAL_BOARD, 'misplaced')
+    # 6. A* Misplaced
+    results['A* Misplaced'] = run_algorithm("A* (Misplaced)", astar_search,
+                                          test_case["start"], test_case["goal"], 'misplaced')
     
-    # Run Hill Climbing
-    results['Hill Climbing'] = run_algorithm("Hill Climbing", hill_climbing, START_BOARD, GOAL_BOARD)
+    # 7. Hill Climbing
+    results['Hill Climbing'] = run_algorithm("Hill Climbing", hill_climbing,
+                                           test_case["start"], test_case["goal"])
     
-    # Run Hill Climbing with Restart
-    results['Hill Climbing (Restart)'] = run_algorithm("Hill Climbing (Restart)", hill_climbing_with_restart, START_BOARD, GOAL_BOARD)
+    # 8. Hill Climbing with Restart
+    results['Hill Climbing (Restart)'] = run_algorithm("Hill Climbing (Restart)", 
+                                                      hill_climbing_with_restart,
+                                                      test_case["start"], test_case["goal"])
+    
+    # 9. Genetic Algorithm
+    results['Genetic Algorithm'] = run_algorithm("Genetic Algorithm", genetic_algorithm_search,
+                                               test_case["start"], test_case["goal"])
     
     # Display comparison table
     print("\n" + "="*70)
