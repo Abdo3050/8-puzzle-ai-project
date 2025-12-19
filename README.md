@@ -207,7 +207,7 @@ python -c "from utils.state import PuzzleState; print('✓ System ready')"
 python main.py
 
 # 2: Comparative analysis
-python run_analysis.py --test all --output detailed
+python run_analysis.py
 
 # 3: Custom puzzle
 python main.py --start "1 2 3 4 0 5 7 8 6" --goal "1 2 3 4 5 6 7 8 0"
