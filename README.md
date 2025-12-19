@@ -378,7 +378,7 @@ If used for academic or research purposes:
 ---
 
 **Project Repository**: https://github.com/Abdo3050/8-puzzle-ai-project  
-**Final Submission**: December 18, 2025, 11:59 PM  
+**Final Submission**: December 19, 2025, 11:59 PM  
 **Contact**: For questions or collaborations, open an issue on GitHub
 
 ---
