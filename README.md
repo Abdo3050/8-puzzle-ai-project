@@ -34,7 +34,7 @@ This project bridges **theoretical computer science** with **practical implement
 ┌─────────────────────────────────────────────────────────────┐
 │                    MAIN EXECUTION LAYER                      │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │  main.py │  │run_analysis│  │test_cases│  │   CLI    │   │
+│  │  main.py │  │run_analysis│  │test_cases│  │    │   │
 │  └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
 └─────────────────────────────────────────────────────────────┘
                               │
